@@ -1,85 +1,49 @@
+<meta charset="utf-8">
 <script>
-  /*
+    /*
     //PROBLEMA
     Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-  //ENTRADA
-  const h = prompt("Em qual hemisferio voce esta?(Sul ou Norte)");
+    //ENTRADA
+    const hemis = prompt("Insira o hemisfério que você se encontra:").toLowerCase().trim();
+    const mes = prompt("Insira em qual mês você está:").toLowerCase().trim();
 
-  //PROCESSAMENTO
-  const date = Number(prompt("me diga o mes em numeros ex:(março, 5)"));
-  const date1 = Number(prompt("me diga o dia"));
-  if (h == "sul") {
-    if (date == 12) {
-      if (date1 >= 21) {
-        alert("verao");
-      } else {
-        alert("primavera");
-      }
-    } else if (date == 3) {
-      if (date1 >= 20) {
-        alert("outono");
-      } else {
-        alert("verao");
-      }
-    } else if (date == 6) {
-      if (date1 >= 20) {
-        alert("inverno");
-      } else {
-        alert("outono");
-      }
-    } else if (date == 9) {
-      if (date1 >= 22) {
-        alert("primavera");
-      } else {
-        alert("inverno");
-      }
-    } else if (date > 9 && date < 12) {
-      alert("primavera");
-    } else if (date > 3 && date < 6) {
-      alert("outono");
-    } else if (date > 6 && date < 9) {
-      alert("inverno");
-    } else {
-      alert("verão");
+    //PROCESSAMENTO
+if (hemis == "sul" || hemis == "s") {
+    if (mes == "janeiro" || mes == "fevereiro" || mes == "março" || mes == "marco") {
+        alert(`Você está no verão.`)
     }
-  } else if (h == "norte") {
-    if (date == 12) {
-      if (date1 >= 21) {
-        alert("inverno");
-      } else {
-        alert("outono");
-      }
-    } else if (date == 3) {
-      if (date1 >= 20) {
-        alert("primavera");
-      } else {
-        alert("inverno");
-      }
-    } else if (date == 6) {
-      if (date1 >= 20) {
-        alert("verão");
-      } else {
-        alert("primavera");
-      }
-    } else if (date == 7) {
-      if (date1 >= 22) {
-        alert("outono");
-      } else {
-        alert("verão");
-      }
-    } else if (date > 9 && date < 12) {
-      alert("outono");
-    } else if (date > 3 && date < 6) {
-      alert("primavera");
-    } else if (date > 6 && date < 9) {
-      alert("verão");
-    } else {
-      alert("inverno");
+    else if (mes == "abril" || mes == "maio" || mes == "junho") {
+        alert(`Você está no outono`)
     }
-  }
-
-  //SAÍDA
+    else if (mes == "julho" || mes == "agosto" || mes == "setembro") {
+        alert(`Você está no inverno`)
+    }
+    else if (mes == "outubro" || mes== "novembro" || mes == "dezembro") {
+        alert(`Você está na primavera.`)
+    }
+    else {
+        alert(`dados inválidos`);
+    }
+}
+if (hemis == "norte" || hemis == "n") {
+    if (mes == "janeiro" || mes == "fevereiro" || mes == "março" || mes == "marco") {
+        alert(`Você está no inverno.`)
+    }
+    else if (mes == "abril" || mes == "maio" || mes == "junho") {
+        alert(`Você está na primavera`)
+    }
+    else if (mes == "julho" || mes == "agosto" || mes == "setembro") {
+        alert(`Você está no verão`)
+    }
+    else if (mes == "outubro" || mes== "novembro" || mes == "dezembro") {
+        alert(`Você está no outono.`)
+    }
+    else {
+        alert(`dados inválidos`);
+    }
+}
+    
 </script>

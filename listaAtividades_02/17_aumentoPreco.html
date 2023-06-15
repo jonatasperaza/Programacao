@@ -7,11 +7,23 @@
         //- acima de 1500: aumento de 5 %
     
     // Entrada
-
+const preco = Number(prompt("Insira o preço do produto:").trim().replace(",","."));
     
     // Processamento
-
-    
-    // Saída
-
+if (preco <= 280) {
+    let resposta = ((preco * 0.2) + preco).toFixed(2).replace(".",",");
+    alert(`O preço do produto com o aumento é de R$ ${resposta}`)
+}
+if (preco <= 700 && preco > 280) {
+    let resposta = ((preco * 0.15) + preco).toFixed(2).replace(".",",");
+    alert(`O preço do produto com o aumento é de R$ ${resposta}`)
+}
+if (preco <= 1500 && preco > 700) {
+    let resposta = ((preco * 0.1) + preco).toFixed(2).replace(".",",");
+    alert(`O preço do produto com o aumento é de R$ ${resposta}`)
+}
+if (preco > 1500) {
+    let resposta = ((preco * 0.05) + preco).toFixed(2).replace(".",",");
+    alert(`O preço do produto com o aumento é de R$ ${resposta}`)
+} 
 </script>
