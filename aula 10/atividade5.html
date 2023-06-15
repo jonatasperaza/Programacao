@@ -1,0 +1,15 @@
+<meta charset="UTF-8" />
+<script>
+  //Problema 5: Vogal
+  //Peça para o usuário informar uma letra e diga, ao final do programa, se ele digitou uma vogal ou não
+
+  const letra = prompt("Me diga uma letra").trim().toLowerCase();
+  const vogal = ["a", "e", "i", "o", "u"];
+  if (isNaN(letra) == true ) {
+    if (vogal.includes(letra)) {
+      alert(`Isso é uma vogal`);
+    } else {
+      alert(`Isso não é uma vogal`);
+    }
+  }
+</script>
