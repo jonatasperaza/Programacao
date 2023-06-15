@@ -1,0 +1,51 @@
+<script>
+  /*
+    //PROBLEMA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+  const n = Number(prompt("Me diga o primeiro numeros: "));
+  const s = prompt("Me diga o sinal (ex:+ - / * ou x)").toLowerCase();
+  const n2 = Number(prompt("Me diga o segundo numero"));
+  let n3 = Number(0);
+  if (isNaN(s) && isNaN(n) == false && isNaN(n2) == false) {
+    if (s == "+") {
+      n3 = n + n2;
+      alert(`${n3}`);
+      if (n3 % 2 == 0) {
+        alert(`Teste`);
+      } else {
+        alert(`Inpar`);
+      }
+    } else if (s == "-") {
+      n3 = n - n2;
+      alert(`${n3}`);
+      if (n3 % 2 == 0) {
+        alert(`Par`);
+      } else {
+        alert(`Inpar`);
+      }
+    } else if (s == "/") {
+      n3 = n / n2;
+      alert(`${n3}`);
+      if (n3 % 2 == 0) {
+        alert(`Par`);
+      } else {
+        alert(`Inpar`);
+      }
+    } else if (s == "." || s == "x") {
+      n3 = n * n2;
+      alert(`${n3}`);
+      if (n3 % 2 == 0) {
+        alert(`Par`);
+      } else {
+        alert(`Inpar`);
+      }
+    }
+  } else {
+    alert(`Digite APENAS os sinais `);
+  }
+</script>

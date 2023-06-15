@@ -1,0 +1,33 @@
+<script>
+  /*
+    //PROBLEMA
+    Faça um script que pergunte em que turno você estuda.
+    Peça para digitar M-matutino ou V-Vespertino ou N-Noturno.
+    Imprima a mensagem
+    - "Bom Dia!"
+    - "Boa Tarde!" ou
+    - "Boa Noite!" ou
+    - "Valor Inválido!"
+    conforme o caso.
+    */
+
+  //ENTRADA
+  const matu = prompt(
+    "Em qual turno voce estudo(M-Matutino, V-Vespertino, N-Noturno)"
+  ).toLowerCase()
+
+  //PROCESSAMENTO
+  if (isNaN(matu)) {
+    if (matu == 'm') {
+      alert(`Bom dia!`);
+    } else if (matu == 'v') {
+      alert(`Boa Tarde!`);
+    } else if (matu == 'n') {
+      alert(`Boa Noite!`);
+    }
+  } else {
+    alert(`ERROR:Digite APENAS os valores(M, V, N)`);
+  }
+
+  //SAÍDA
+</script>

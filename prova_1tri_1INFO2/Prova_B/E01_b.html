@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: Média ponderada
+    Considere que um professor aplicou, durante o trimestre, duas atividades avaliativas para os alunos da disciplina de Programação, sendo que cada atividade teve um peso diferente.
+    Peça para o usuário informar qual foi o peso de cada atividade avaliativa (que deverá ser informada em números inteiros) e a nota que o aluno obteve em cada atividade avaliativa (que poderá ser em números decimais).
+    Calcule a média final obtida pelo aluno e a apresente em tela.
+    */
+
+    //ENTRADA
+    const p01 = Number(prompt("Qual o peso da primeira prova?"));
+    const p001 = Number(prompt("Qual a nota do aluno na primeira prova?").replace(',', '.'));
+    const p02 = Number(prompt("Qula o peso da segunda prova?"));
+    const p002 = Number(prompt("Qual a nota do aluno na segunda prova?").replace(',', '.'));
+    //PROCESSAMENTO
+    const n0 = p01 + p02
+    const n1 = ((p01 / n0) - 1) * p001;
+    const n2 = ((p02 / n0) - 1) * p002;
+    let n3 = Math.abs((n1 + n2));
+    //SAÍDA
+    alert(`A media final do aluno foi de ${n3}.`);
+</script

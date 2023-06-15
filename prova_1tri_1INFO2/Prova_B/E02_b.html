@@ -1,0 +1,17 @@
+<script>
+    /*
+    PROBLEMA: Margem de lucro
+    No comércio, os preços dos produtos geralmente são definidos com base em uma margem percentual de lucro.
+    Elabore um programa que pergunte ao usuário valor de compra de um produto e também pergunte o percentual de lucro desejado.
+    Calcule, mediante os dois valores informados, qual será o valor de revenda do produto.
+    */
+
+    //ENTRADA
+    const vP = Number(prompt("Qual o valor de mercado esse prouto?"));
+    const pL = Number(prompt("Qual o percentual de lucro desse prouto?"));
+    //PROCESSAMENTO
+    const pP = (pL / 100) * vP;
+    const pT = pP + vP;
+    //SAÍDA
+    alert(`O valor do produto tera de ser ${pT}.`);
+</script>

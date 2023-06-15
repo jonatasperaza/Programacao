@@ -1,0 +1,51 @@
+<script>
+    /*
+    //PROBLEMA
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+    const l = Number(prompt("Quantos litros foram comprados ?").toLowerCase()).replace(",", ".")
+    const c = prompt("Qual foi o tipo de combustivel(G-gasolina, A-álcool)").toLowerCase().replace(",", ".")
+    let d = 0
+    let p = 0
+    //PROCESSAMENTO
+    if (c == "g" || c == "gasolina") {
+        p = 6.50
+
+        if(l > 20){
+            d =(p * l) - ((p * l) * 0.05)
+        }
+        else {
+            d =(p * l) - ((p * l) * 0.03)
+        }
+        alert(`${d}`)
+    }
+    else if (c == "a" || c == "alcool") {
+        p = 6.10
+        if(l > 20){
+            d =(p * l) - ((p * l) * 0.06)
+        }
+        else{
+            d =(p * l) - ((p * l) * 0.04)
+        }
+        alert(`${d}`)
+    }
+    else {
+        alert("Caractere incorreto tente novamente")
+        window.location.reload()
+    }
+    
+    //SAÍDA
+
+
+</script>

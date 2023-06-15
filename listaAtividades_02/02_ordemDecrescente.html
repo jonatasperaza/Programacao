@@ -1,0 +1,35 @@
+<script>
+  /*
+    //PROBLEMA
+    Faça um script que leia três números e mostre-os em ordem decrescente.
+    */
+
+  //ENTRADA
+  const n1 = prompt("Digite um numero").trim();
+  const n2 = prompt("Digite outro numero").trim();
+  const n3 = prompt("Digite outro numero").trim();
+  //PROCESSAMENTO
+  if (!isNaN(n1) && !isNaN(n2) && !isNaN(n3)) {
+    if (n1 == n2 || n1 == n3 || n2 == n3) {
+      alert(`Digite numeros diferentes`);
+    } else {
+      if (n1 > n2 && n1 > n3 && n2 > n3) {
+        alert(`${n1}, ${n2}, ${n3}`);
+      } else if (n1 > n2 && n1 > n3 && n3 > n2) {
+        alert(`${n1}, ${n3}, ${n2}`);
+      } else if (n2 > n1 && n2 > n3 && n3 > n1) {
+        alert(`${n2}, ${n3}, ${n1}`);
+      } else if (n2 > n1 && n2 > n3 && n1 > n3) {
+        alert(`${n2}, ${n1}, ${n3}`);
+      } else if (n3 > n1 && n3 > n2 && n2 > n1) {
+        alert(`${n3}, ${n2}, ${n1}`);
+      } else if (n3 > n1 && n3 > n3 && n1 > n2) {
+        alert(`${n3}, ${n1}, ${n2}`);
+      }
+    }
+  }else {
+    alert(`ERROR:Digite APENAS numeros`);
+  }
+
+  //SAÍDA
+</script>

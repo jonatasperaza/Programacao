@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<script>
+//Uma pessoa utiliza o transporte público diariamente para ir e voltar de São Francisco do Sul para Araquari. Pergunte ao usuário o custo de cada passagem. Seu filho também o acompanha durante a viagem, porém paga apenas metade do preço por ser estudante.
+// Calcule e apresente, ao final do programa, o custo total mensal que os dois terão em transporte, considerando que o mês possui 22 dias úteis.
+
+const passagem_Pai = Number(prompt(`Qual o preço que você por passagem.`).replace(',', '.'));
+const passagem_Filho = passagem_Pai * 0.50;
+const passagem_Total = passagem_Filho + passagem_Pai;
+let passagem_dias = passagem_Total * 22;
+passagem_dias = passagem_dias.toFixed(2).replace('.', ',');
+alert(`No total voce gasta por mês em passagens ${passagem_dias} reais.`);
+
+</script>

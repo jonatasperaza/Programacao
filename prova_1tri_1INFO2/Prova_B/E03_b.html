@@ -1,0 +1,21 @@
+<script>
+    /*
+    PROBLEMA: Garrafas de água
+    Considere que uma pessoa toma, a cada dois dias, 7 garrafas de água, sendo que esta garrafa contém 600 ml. Peça para o usuário informar qual o preço da garrafa de água.
+    Calcule quantos litros de água a pessoa terá tomado ao fim de 2 anos e quantos reais terá gasto. Apresente os dois resultados na tela.
+    **Considere que um ano possui 365 dias!
+    */
+
+    //ENTRADA
+    const vA = Number(prompt("Qual o preço de uma garrafa de agua?"));
+    //PROCESSAMENTO
+    const garrafa = Number(600);
+    const semana = Number(24,5);
+    const ano1 = semana * 521429;
+    const ano2 = ano1 * 2;
+    const L = (ano2 * 600) / 1000;
+    const R = (vA * ano2);
+    //SAÍDA
+    alert(`Foram consumidos no ano ${L} Litros de agua e foram gastos ${R} Reais`);
+
+</script>
